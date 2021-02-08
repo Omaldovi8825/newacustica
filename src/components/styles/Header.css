@@ -1,0 +1,13 @@
+.header {
+    border: 1px solid black;
+    display: flex;
+}
+
+.menu {
+    border: 1px solid black;
+}
+
+.menu a {
+    text-decoration: none;
+    margin: 0 20px;
+}
