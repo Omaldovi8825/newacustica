@@ -10,15 +10,13 @@ import Audio from '../pages/Audio'
 
 const App = () => (
     <BrowserRouter>
-        <Switch>
+        <Layout>
             <Route exact path="/" component={Home} />
-            <Layout>
-                <Route exact path="/iluminacion" component={Iluminacion} />
-                <Route exact path="/video" component={Video} />
-                <Route exact path="/dj" component={Dj} />
-                <Route exact path="/audio" component={Audio} />
-            </Layout>
-        </Switch>
+            <Route exact path="/iluminacion" component={Iluminacion} />
+            <Route exact path="/video" component={Video} />
+            <Route exact path="/dj" component={Dj} />
+            <Route exact path="/audio" component={Audio} />
+        </Layout>
     </BrowserRouter>
 )
 

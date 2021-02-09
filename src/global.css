@@ -5,3 +5,10 @@
 body {
     margin: 0;
 }
+
+.main-container {
+    width: 1000px;
+    /* height: 100vh; */
+    border: 1px solid black;
+    margin: auto;
+}

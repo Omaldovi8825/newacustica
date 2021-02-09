@@ -1,9 +1,24 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
-const Audio = () => {
+import './styles/Audio.css'
+
+import ProductDetails from '../components/ProductDetails'
+
+const Audio = ({audio}) => {
     return(
-        <h1>Audio</h1>
+        <div className="main-container">
+            {audio.map((product) => (
+                <ProductDetails key={product.id} producto={product}/>
+            ))}
+        </div>
     )
 }
 
-export default Audio
+const mapStateToProps = state => {
+    return {
+        audio: state.productos.audio
+    }
+}
+
+export default connect(mapStateToProps, null)(Audio)

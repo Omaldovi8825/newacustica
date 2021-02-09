@@ -1,9 +1,22 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
-const Iluminacion = () => {
+import ProductDetails from '../components/ProductDetails'
+
+const Iluminacion = ({iluminacion}) => {
     return(
-        <h1>Iluminacion</h1>
+        <div className="main-container">
+            {iluminacion.map((product) => (
+                <ProductDetails key={product.id} producto={product}/>
+            ))}
+        </div>
     )
 }
 
-export default Iluminacion
+const mapStateToProps = state => {
+    return {
+        iluminacion: state.productos.iluminacion
+    }
+}
+
+export default connect(mapStateToProps, null)(Iluminacion)
