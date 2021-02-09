@@ -4,6 +4,8 @@ import {connect} from 'react-redux'
 
 import './styles/Header.css'
 
+import CartModal from '../modals/CartModal'
+
 const Header = props => {
 
     const total = props.cart.reduce((acum, producto) => acum + producto.price, 0)
@@ -21,6 +23,7 @@ const Header = props => {
                 <i className="fas fa-shopping-cart"></i>
                 <span>${total}</span>
             </div>
+            <CartModal />
         </div>
     )
 }
