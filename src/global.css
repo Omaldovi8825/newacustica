@@ -6,6 +6,10 @@ body {
     margin: 0;
 }
 
+input {
+    outline: none;
+}
+
 .main-container {
     width: 1000px;
     /* height: 100vh; */

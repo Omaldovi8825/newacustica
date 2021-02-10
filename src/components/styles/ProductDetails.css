@@ -74,3 +74,16 @@
     width: 30%;
 }
 
+.adding-section {
+    /* border: 1px solid white; */
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.adding-section input {
+    width: 50px;
+    text-align: center;
+}
+

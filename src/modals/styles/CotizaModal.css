@@ -1,0 +1,38 @@
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000ab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-times-circle {
+    color: white;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 40px;
+}
+
+.cotiza-area {
+    width: 500px;
+    height: 80%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cotiza-area form {
+    border: 1px solid black;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

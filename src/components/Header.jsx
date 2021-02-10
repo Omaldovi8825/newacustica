@@ -1,15 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 
 import './styles/Header.css'
 
-import CartModal from '../modals/CartModal'
-
 const Header = props => {
 
-    const total = props.cart.reduce((acum, producto) => acum + producto.price, 0)
-
+    const total = props.cart.reduce((acum, producto) => acum + (producto.price * producto.qty), 0)
+ 
     return(
         <div className="header">
             <Link to="/">Home</Link>
@@ -20,10 +18,11 @@ const Header = props => {
                 <Link to="/video">Video</Link>
             </div>
             <div className="cart">
-                <i className="fas fa-shopping-cart"></i>
+                <Link to="/cotizacion">
+                    <i className="fas fa-shopping-cart"></i>
+                </Link>
                 <span>${total}</span>
             </div>
-            <CartModal />
         </div>
     )
 }
