@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import {BrowserRouter, Route, Switch, HashRouter} from 'react-router-dom'
 
 import Layout from './Layout'
 import Home from '../pages/Home'
@@ -10,7 +10,7 @@ import Audio from '../pages/Audio'
 import Cotizacion from '../pages/Cotizacion'
 
 const App = () => (
-    <BrowserRouter>
+    <HashRouter>
         <Layout>
             <Route exact path="/" component={Home} />
             <Route exact path="/iluminacion" component={Iluminacion} />
@@ -19,7 +19,7 @@ const App = () => (
             <Route exact path="/audio" component={Audio} />
             <Route exact path="/cotizacion" component={Cotizacion} />
         </Layout>
-    </BrowserRouter>
+    </HashRouter>
 )
 
 export default App
