@@ -1,7 +1,7 @@
 .parallax {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #fff;
-    text-shadow: 0PX 0PX 30PX blueviolet;
+    text-shadow: 0 0 30px blueviolet;
     height: 60vh;
     background: #fff fixed no-repeat 50% 50%;
     background-size: cover;
