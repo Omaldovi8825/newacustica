@@ -112,14 +112,16 @@ const CartModal = ({isClosed, closeModal, cart}) => {
                             onChange={handleChange}
                             value={form.evento}
                         />
-                        {cart.map((product, index) => (
-                            <div key={index}>
-                                <input type="hidden" name={`foto${[index+1]}`} value={product.cover}/>
-                                <input type="hidden" name={`id${[index+1]}`} value={`id:${product.id}`}/>                                                                                                                              
-                                <input type="hidden" name={`cantidad${[index+1]}`} value={product.qty}/>                                
-                                <input type="hidden" name={`message${[index+1]}`} value={product.name}/> 
-                            </div>
-                        ))}
+                        {cart.map((product, index) => {
+                            const {name, id, qty} = product
+                            return(
+                                <input 
+                                    key={index}
+                                    type="hidden" 
+                                    name={`product${[index+1]}`} 
+                                    value={`${qty} ${name} [ id:${id} ]`}
+                                /> 
+                        )})}
                         <button type="submit" >Enviar Cotizacion</button>
                     </form>
                 </div>
