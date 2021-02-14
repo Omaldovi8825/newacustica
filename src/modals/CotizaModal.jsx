@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
 import {createPortal} from 'react-dom'
 import {connect} from 'react-redux'
+import {openToast, closeToast} from '../actions'
 import emailjs from 'emailjs-com'
 
 import './styles/CotizaModal.css'
 
-const CartModal = ({isClosed, closeModal, cart}) => {
+const CartModal = ({isClosed, closeModal, cart, openToast, closeToast}) => {
 
     if(isClosed){
         return null
     }
 
-    const [form, setForm] = useState({
+    const initialFormState = {
         nombre: '',
         email: '',
         telefono: '',
@@ -19,31 +20,25 @@ const CartModal = ({isClosed, closeModal, cart}) => {
         fecha: '',
         asistentes: '',
         evento: ''
-    })
+    }
 
-    const reducedCart = cart.map( product => {
-        return {
-            name: product.name,
-            qty: product.qty,
-            id: product.id
-        }
-    })
+    const [form, setForm] = useState(initialFormState)
 
-    const cotizacion = {
-        contacto: form,
-        cart: reducedCart
+    const showToast = () => {
+        openToast()
+        setTimeout(() => {
+            closeToast()
+        }, 3000)
     }
 
     const handleSubmit = e => {
         e.preventDefault()
         emailjs.sendForm('service_6gospjv', 'template_qudchnn', e.target, 'user_vtTQxlKUrU0SjMRoW0gzv')
-        .then((result) => {
-            alert('cotizacion enviada con exito');
-        }, (error) => {
-            console.log(error.text);
-        });
-        // console.log(cotizacion)
-        // close()
+            .then((result) => showToast())
+            .catch(error => console.log(error.text))
+        
+        setForm(initialFormState)
+        closeModal()
     }
 
     const handleChange = e => {
@@ -112,14 +107,16 @@ const CartModal = ({isClosed, closeModal, cart}) => {
                             onChange={handleChange}
                             value={form.evento}
                         />
-                        {cart.map((product, index) => (
-                            <div key={index}>
-                                <input type="hidden" name={`foto${[index+1]}`} value={product.cover}/>
-                                <input type="hidden" name={`id${[index+1]}`} value={`id:${product.id}`}/>                                                                                                                              
-                                <input type="hidden" name={`cantidad${[index+1]}`} value={product.qty}/>                                
-                                <input type="hidden" name={`message${[index+1]}`} value={product.name}/> 
-                            </div>
-                        ))}
+                        {cart.map((product, index) => {
+                            const {name, id, qty} = product
+                            return(
+                                <input 
+                                    key={index}
+                                    type="hidden" 
+                                    name={`product${[index+1]}`} 
+                                    value={`${qty} ${name} [ id:${id} ]`}
+                                /> 
+                        )})}
                         <button type="submit" >Enviar Cotizacion</button>
                     </form>
                 </div>
@@ -134,4 +131,9 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, null)(CartModal)
+const mapDispatchToProps = {
+    openToast,
+    closeToast
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CartModal)

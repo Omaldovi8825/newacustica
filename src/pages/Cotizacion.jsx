@@ -3,6 +3,7 @@ import React, {useState} from 'react'
 import {connect} from 'react-redux'
 import CartRow from '../components/CartRow'
 import CotizaModal from '../modals/CotizaModal'
+import Toast from '../modals/Toast'
 
 import './styles/Cotizacion.css'
 
@@ -43,6 +44,7 @@ const Cotizacion = ({cart}) => {
                 isClosed={isClosed} 
                 closeModal={() => setIsclosed(true)}
             />
+            <Toast />
         </>
     )
 }
