@@ -11,7 +11,7 @@ const CartModal = ({isClosed, closeModal, cart}) => {
         return null
     }
 
-    const [form, setForm] = useState({
+    const initialFormState = {
         nombre: '',
         email: '',
         telefono: '',
@@ -19,31 +19,18 @@ const CartModal = ({isClosed, closeModal, cart}) => {
         fecha: '',
         asistentes: '',
         evento: ''
-    })
-
-    const reducedCart = cart.map( product => {
-        return {
-            name: product.name,
-            qty: product.qty,
-            id: product.id
-        }
-    })
-
-    const cotizacion = {
-        contacto: form,
-        cart: reducedCart
     }
+
+    const [form, setForm] = useState(initialFormState)
 
     const handleSubmit = e => {
         e.preventDefault()
         emailjs.sendForm('service_6gospjv', 'template_qudchnn', e.target, 'user_vtTQxlKUrU0SjMRoW0gzv')
         .then((result) => {
-            alert('cotizacion enviada con exito');
-        }, (error) => {
-            console.log(error.text);
-        });
-        // console.log(cotizacion)
-        // close()
+            alert('cotizacion enviada con exito')
+            setForm(initialFormState)
+            closeModal()
+        }, (error) => {  console.log(error.text)})
     }
 
     const handleChange = e => {
