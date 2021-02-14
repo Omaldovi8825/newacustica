@@ -6,8 +6,8 @@ import './styles/Header.css'
 
 const Header = props => {
 
-    const total = props.cart.reduce((acum, producto) => acum + (producto.price * producto.qty), 0)
- 
+    const total = props.cart.reduce((acum, producto) => acum + producto.qty, 0)
+
     return(
         <div className="header">
             <Link to="/">Home</Link>
@@ -19,9 +19,9 @@ const Header = props => {
             </div>
             <div className="cart">
                 <Link to="/cotizacion">
-                    <i className="fas fa-shopping-cart"></i>
+                    <i className="fas fa-shopping-basket"></i>
                 </Link>
-                <span>${total}</span>
+                <span>{total}</span>
             </div>
         </div>
     )

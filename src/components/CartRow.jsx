@@ -2,25 +2,19 @@ import React, {useState} from 'react'
 import {connect} from 'react-redux'
 import {removeFromCart} from '../actions'
 
-const CartRow = ({producto, removeFromCart}) => {
-    const {name, description, price, id, qty} = producto
-
+const CartRow = ({producto, removeFromCart, rowId}) => {
+    const {name, description, qty, cover} = producto
     return (
         <tr>
             <td className="cart-table-product-quantity">
                 <span>{qty}</span>
                 <span>X</span>
-                <img src="https://i.ibb.co/2vjM6bf/s4.jpg" alt="producto"/>
+                <img src={cover} alt="producto"/>
             </td>
+            <td>{name}</td>
+            <td><p>{description}</p></td>
             <td>
-                <h3>{name}</h3>
-                <p>{description}</p>
-            </td>
-            <td>
-                <p>${price * qty}</p>
-            </td>
-            <td>
-                <i className="fas fa-trash" onClick={() => removeFromCart(id)}></i>
+                <i className="fas fa-trash" onClick={() => removeFromCart(rowId)}></i>
             </td>
         </tr>
     )

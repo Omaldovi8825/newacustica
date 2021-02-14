@@ -16,14 +16,18 @@ const Cotizacion = ({cart}) => {
                     <thead>
                         <tr>
                             <th>Cantidad</th>
+                            <th>Producto</th>
                             <th>Detalles</th>
-                            <th>Precio</th>
                             <th>Eliminar</th>
                         </tr>
                     </thead>
                     <tbody>
                         {cart.map((product, index) => (
-                            <CartRow key={index} producto={product} />
+                            <CartRow 
+                                key={index} 
+                                producto={product}
+                                rowId={index} 
+                            />
                         ))}
                     </tbody>
                 </table>

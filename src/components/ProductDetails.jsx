@@ -1,22 +1,14 @@
-import React, {useState} from 'react'
-
+import React from 'react'
 import {connect} from 'react-redux'
 import {addToCart} from '../actions'
-
 import './styles/ProductDetails.css'
 
-const useHandleCounter = () => {
-    const [counter, setCounter] = useState(1)
+import Slider from '../components/Slider'
 
-    if(counter < 1){
-        setCounter(1)
-    }
-
-    return [counter, setCounter]
-}
+import {useHandleCounter} from '../hooks'
 
 const ProductDetails = props => {
-    const {id, name, description, price} = props.producto
+    const {id, name, description, cover, slider} = props.producto
     
     const [quantity, setQuantity] = useHandleCounter()
     
@@ -32,10 +24,10 @@ const ProductDetails = props => {
     return(
         <div className="product-container">
             <div className="product-details">
+                <img src={cover} alt="product"/>
                 <h1 className="product-title">{name}</h1>
                 <div className="sliding-card">
                     <p>{description}</p>
-                    <p>${price} p/u</p>
                     <div className="adding-section">
                         <input 
                             type="number"
@@ -50,9 +42,7 @@ const ProductDetails = props => {
                     </div>
                 </div>
             </div>
-            <div className="product-slider">
-
-            </div>
+            <Slider slides={slider}/>
         </div>
     )
 }

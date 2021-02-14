@@ -9,7 +9,7 @@ const reducer = (state, action) => {
         case 'REMOVE_FROM_CART':
             return {
                 ...state,
-                cart: state.cart.filter(producto => producto.id !== action.payload)
+                cart: state.cart.filter((producto, index) => index !== action.payload)
             }
         
         default:

@@ -30,3 +30,28 @@ const Home = () => {
 }
 
 export default Home
+
+// {contacto: {…}, cart: Array(2)}
+// cart: Array(2)
+// 0:
+// id: 1
+// name: "Poste"
+// qty: 1
+// __proto__: Object
+// 1:
+// id: 2
+// name: "Duo de poste"
+// qty: 1
+// __proto__: Object
+// length: 2
+// __proto__: Array(0)
+// contacto:
+// asistentes: "20"
+// direccion: "av benito juarez garcia sur 603"
+// email: "romavi20@hotmail.com"
+// evento: "boda"
+// fecha: "2021-02-20"
+// nombre: "Omar"
+// telefono: "+527222700664"
+// __proto__: Object
+// __proto__: Object
