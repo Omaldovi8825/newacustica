@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import {createPortal} from 'react-dom'
 import {connect} from 'react-redux'
+import {openToast, closeToast} from '../actions'
 import emailjs from 'emailjs-com'
 
 import './styles/CotizaModal.css'
 
-const CartModal = ({isClosed, closeModal, cart}) => {
+const CartModal = ({isClosed, closeModal, cart, openToast, closeToast}) => {
 
     if(isClosed){
         return null
@@ -23,14 +24,21 @@ const CartModal = ({isClosed, closeModal, cart}) => {
 
     const [form, setForm] = useState(initialFormState)
 
+    const showToast = () => {
+        openToast()
+        setTimeout(() => {
+            closeToast()
+        }, 3000)
+    }
+
     const handleSubmit = e => {
         e.preventDefault()
         emailjs.sendForm('service_6gospjv', 'template_qudchnn', e.target, 'user_vtTQxlKUrU0SjMRoW0gzv')
-        .then((result) => {
-            alert('cotizacion enviada con exito')
-            setForm(initialFormState)
-            closeModal()
-        }, (error) => {  console.log(error.text)})
+            .then((result) => showToast())
+            .catch(error => console.log(error.text))
+        
+        setForm(initialFormState)
+        closeModal()
     }
 
     const handleChange = e => {
@@ -123,4 +131,9 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, null)(CartModal)
+const mapDispatchToProps = {
+    openToast,
+    closeToast
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CartModal)

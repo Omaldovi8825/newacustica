@@ -14,7 +14,8 @@ const composeEnhancer =   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_
 
 const initialState = {
     productos: productsList,
-    cart: []
+    cart: [],
+    toastOpen: false 
 }
 const store = createStore(reducers, initialState, composeEnhancer)
 
