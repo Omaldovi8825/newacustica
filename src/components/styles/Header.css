@@ -7,11 +7,22 @@
 
 .menu {
     border: 1px solid black;
+    transform: perspective(1000px) rotateX(60deg);
 }
 
 .menu a {
     text-decoration: none;
     margin: 0 20px;
+    font-size: 3vh;
+    text-transform: uppercase;
+    
+
+}
+
+.menu :hover {
+    transform: perspective(10000px) rotateX(0deg);
+    transition: 2s;
+    box-shadow: 0px 0px 30px white;
 }
 
 .cart {

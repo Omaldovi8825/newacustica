@@ -4,6 +4,11 @@
 
 body {
     margin: 0;
+    background-image: radial-gradient(circle at center left, rgb(46, 46, 46) 0%, rgb(46, 46, 46) 6%,rgb(41, 41, 41) 6%,
+     rgb(41, 41, 41) 27%,rgb(36, 36, 36) 27%, rgb(36, 36, 36) 42%,rgb(31, 31, 31) 42%, 
+     rgb(31, 31, 31) 63%,rgb(25, 25, 25) 63%, rgb(25, 25, 25) 69%,rgb(20, 20, 20) 69%,
+      rgb(20, 20, 20) 81%,rgb(15, 15, 15) 81%, rgb(15, 15, 15) 100%);   
+       background-attachment:fixed;
 }
 
 input {

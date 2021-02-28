@@ -1,7 +1,7 @@
 .parallax {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Bodoni Berthold BQ';
     color: #fff;
-    text-shadow: 0PX 0PX 30PX blueviolet;
+    text-shadow: 0PX 0PX 30PX black;
     height: 60vh;
     background: #fff fixed no-repeat 50% 50%;
     background-size: cover;
@@ -12,7 +12,7 @@
 
 .parallax h1 {
     font-size: 70px;
-    border: 3px solid #ffffff57;
+    /* border: 3px solid #ffffff57; */
     padding: 10px;
 }
 
