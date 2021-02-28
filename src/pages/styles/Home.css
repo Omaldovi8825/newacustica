@@ -1,5 +1,5 @@
 .parallax {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Shree Devanagari 714";
     color: #fff;
     text-shadow: 0 0 30px blueviolet;
     height: 60vh;
@@ -11,8 +11,8 @@
 }
 
 .parallax h1 {
-    font-size: 70px;
-    border: 3px solid #ffffff57;
+   
+    font-size: 10vh ;
     padding: 10px;
 }
 

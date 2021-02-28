@@ -12,7 +12,9 @@
     width: 60%;
     position: relative;
     overflow: hidden;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Shree Devanagari 714";
+    text-transform: uppercase;
+    text-shadow: 0 0 20px blueviolet;
 }
 
 .product-details img {
@@ -47,7 +49,8 @@
     right: 0;
     width: 60%;
     height: 100%;
-    background-color: #000000d6;
+    background-image: radial-gradient(circle at top right, rgb(109,5,73) 0%, rgb(144,5,112) 2%,rgb(122,5,103) 2%, rgb(122,5,103) 6%,rgb(109,4,104) 6%, rgb(109,4,104) 10%,rgb(91,3,99) 10%, rgb(91,3,99) 14%,rgb(45,4,58) 14%, rgb(45,4,58) 18%,rgb(8,8,9) 18%, rgb(8,8,9) 100%);
+    /* background-color: #000000d6; */
     transform: translateX(80%);
     transition: transform 1s;
     color: white;

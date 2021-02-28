@@ -4,6 +4,9 @@
 
 body {
     margin: 0;
+    background-image: radial-gradient(circle at bottom right, rgb(4, 128, 235) 0%, rgb(4, 128, 235) 4%,rgb(4, 108, 199) 4%, rgb(4, 108, 199) 8%,rgb(5, 89, 163) 8%, rgb(5, 89, 163) 12%,rgb(5, 69, 127) 12%, rgb(5, 69, 127) 16%,rgb(5, 49, 91) 16%, rgb(5, 49, 91) 20%,rgb(6, 30, 55) 20%, rgb(6, 30, 55) 24%,transparent 24%, transparent 100%),radial-gradient(circle at bottom left, rgb(4, 128, 235) 0%, rgb(4, 128, 235) 4%,rgb(4, 108, 199) 4%, rgb(4, 108, 199) 8%,rgb(5, 89, 163) 8%, rgb(5, 89, 163) 12%,rgb(5, 69, 127) 12%, rgb(5, 69, 127) 16%,rgb(5, 49, 91) 16%, rgb(5, 49, 91) 20%,rgb(6, 30, 55) 20%, rgb(6, 30, 55) 24%,rgb(6, 10, 19) 24%, rgb(6, 10, 19) 100%);
+    background-attachment: fixed
+
 }
 
 input {
