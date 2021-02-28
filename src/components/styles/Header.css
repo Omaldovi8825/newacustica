@@ -1,8 +1,18 @@
 .header {
-    border: 1px solid rgb(9, 243, 134);
+    /* border: 1px solid rgb(9, 243, 134); */
     display: flex;
     justify-content: space-around;
     padding: 20px;
+}
+
+.hHome {
+    padding: 24px 80px;
+    background-image: url("https://i.ibb.co/LCmRnxP/logo-dorado-Mesa-de-trabajo-1.png");
+    background-size: cover;
+    /* border: 1px solid #1161B0; */
+    /* color: #fff; */
+    /* border-radius: 4px; */
+    text-decoration:none;
 }
 
 .menu {
@@ -21,9 +31,9 @@
 .menu a {
     text-decoration: none;
     margin: 0 20px;
-    font-family: "Shree Devanagari 714";
+    font-family: "Shree Devanagari 714", "helvetica";
     color: aliceblue;
-    font-weight: bolder;
+    /* font-weight: bolder; */
     text-shadow: 0 0 30px blueviolet;
     font-size: 4vh;
     text-transform: uppercase;
@@ -32,10 +42,10 @@
 
 .menu a:hover{
     box-shadow: 0px 0px 30px #0dedf5;
-    background-color: #0dedf552;
+    /* background-color: #0dedf552; */
     color: rgb(253, 253, 253);
-    text-shadow: 0 0 5px rgb(2, 250, 229);
-    border-radius: 10px;
+    text-shadow: 0 0 30px #0dedf5;
+    border-radius: 20px;
     padding: 10px;
    
 }

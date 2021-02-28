@@ -10,7 +10,7 @@ const Header = props => {
 
     return(
         <div className="header">
-            <Link to="/">Home</Link>
+            <Link to="/" className="hHome"></Link>
             <div className="menu">
                 <Link to="/audio" className="haudio">Audio</Link>
                 <Link to="/iluminacion" className="hilumina">Iluminacion</Link>
