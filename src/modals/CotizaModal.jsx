@@ -38,7 +38,7 @@ const CartModal = ({isClosed, closeModal}) => {
                         <label htmlFor="type">Tipo de evento</label>
                         <input type="text" name="type"/>                                
                     </form>
-                    <button type="submit">Enviar Cotizacion</button>
+                    <button type="submit" className="buttonC">Enviar Cotizacion</button>
                 </div>
             </div>, 
             document.getElementById('modal'))
