@@ -1,5 +1,5 @@
 .parallax {
-    font-family: 'Bodoni Berthold BQ';
+    font-family: 'Bodoni Berthold BQ' !important;
     color: #fff;
     text-shadow: 0PX 0PX 30PX black;
     height: 60vh;
