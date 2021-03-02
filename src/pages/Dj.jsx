@@ -1,9 +1,21 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
-const Dj = () => {
+import ProductDetails from '../components/ProductDetails'
+
+const DJ = ({dj}) => {
     return(
-        <h1>Dj</h1>
+        <div className="main-container">
+            {dj.map((product) => (
+                <ProductDetails key={product.id} producto={product}/>
+            ))}
+        </div>
     )
 }
+const mapStateToProps = state => {
+    return {
+        dj: state.productos.dj
+    }
+}
 
-export default Dj
+export default connect(mapStateToProps, null)(DJ)
