@@ -12,10 +12,11 @@ const Header = props => {
         <div className="header">
             <Link to="/" className="hHome"></Link>
             <div className="menu">
-                <Link to="/audio" className="haudio">Audio</Link>
-                <Link to="/iluminacion" className="hilumina">Iluminacion</Link>
-                <Link to="/dj" className="hdj">Dj</Link>
-                <Link to="/video" className="hvideo">Video</Link>
+                <Link to="/audio">Audio</Link>
+                <Link to="/iluminacion">Iluminacion</Link>
+                <Link to="/streaming">Streaming</Link>
+                <Link to="/dj">Dj</Link>
+                <Link to="/video">Video</Link>
             </div>
             <div className="cart">
                 <Link to="/cotizacion">

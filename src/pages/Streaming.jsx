@@ -2,12 +2,13 @@ import React from 'react'
 import {connect} from 'react-redux'
 
 
+
 import ProductDetails from '../components/ProductDetails'
 
-const Video = ({video}) => {
+const Streaming = ({streaming}) => {
     return(
         <div className="main-container">
-            {video.map((product) => (
+            {streaming.map((product) => (
                 <ProductDetails key={product.id} producto={product}/>
             ))}
         </div>
@@ -16,8 +17,8 @@ const Video = ({video}) => {
 
 const mapStateToProps = state => {
     return {
-        video: state.productos.video
+        streaming: state.productos.streaming
     }
 }
 
-export default connect(mapStateToProps, null)(Video)
+export default connect(mapStateToProps, null)(Streaming)

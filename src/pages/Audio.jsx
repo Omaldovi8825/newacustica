@@ -2,7 +2,6 @@ import React from 'react'
 import {connect} from 'react-redux'
 
 import './styles/Audio.css'
-
 import ProductDetails from '../components/ProductDetails'
 
 const Audio = ({audio}) => {
@@ -12,6 +11,7 @@ const Audio = ({audio}) => {
                 <ProductDetails key={product.id} producto={product}/>
             ))}
         </div>
+        
     )
 }
 
