@@ -4,7 +4,7 @@
     height: 200px;
     display: flex;
     justify-content: space-between;
-    margin: 20px 0;
+    margin: 60px 0;
 }
 
 .product-details{
@@ -25,7 +25,9 @@
 
 .product-title {
     color: white;
-    background-color: #000000d6;
+    background-image: url("https://i.ibb.co/sHLkgMh/header.png");
+    background-size: cover;
+    /* background-color: rgb(236, 30, 209); */
     text-align: center;
     width: 100%;
     position: absolute;
@@ -49,8 +51,9 @@
     right: 0;
     width: 60%;
     height: 100%;
-    background-image: radial-gradient(circle at top right, rgb(109,5,73) 0%, rgb(144,5,112) 2%,rgb(122,5,103) 2%, rgb(122,5,103) 6%,rgb(109,4,104) 6%, rgb(109,4,104) 10%,rgb(91,3,99) 10%, rgb(91,3,99) 14%,rgb(45,4,58) 14%, rgb(45,4,58) 18%,rgb(8,8,9) 18%, rgb(8,8,9) 100%);
-    /* background-color: #000000d6; */
+    background-image: url("https://i.ibb.co/NTsf65W/dorado.png");
+    background-size: cover;
+    /* background-color: #000000a2; */
     transform: translateX(80%);
     transition: transform 1s;
     color: white;
@@ -64,7 +67,7 @@
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    background-color: #09e4ec;
+    background-image: url("https://i.ibb.co/Z6PRyJB/dorado.png");
     border: none;
     outline: none;
     font-size: 40px;

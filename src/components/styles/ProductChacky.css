@@ -14,7 +14,7 @@
     background-image: url(https://i.ibb.co/2vjM6bf/s4.jpg);
     background-size:cover;
     overflow: hidden;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Bodoni Berthold BQ";
 }
 
 .texto{
@@ -24,6 +24,7 @@
     text-align: center;
     color: #f1f0ec;
     position: absolute;
+    
     transform:translateX(110%);
  }
 
