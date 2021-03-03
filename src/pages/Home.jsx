@@ -7,17 +7,17 @@ const Home = () => {
     return(
         <>
             <Link className="main-menu-item" to="/quienes">
-                <section className="parallax" id="seccion7">
+                <section className="parallax" id="seccion6">
                     <h1>¿Quiénes somos?</h1>
                 </section>            
             </Link>
             <Link className="main-menu-item" to="/audio">
-                <section className="parallax" id="seccion2">
+                <section className="parallax" id="seccion1">
                     <h1>AUDIO</h1>
                 </section>            
             </Link>
             <Link className="main-menu-item" to="/iluminacion">
-                <section className="parallax" id="seccion1">
+                <section className="parallax" id="seccion2">
                     <h1>ILUMINACION</h1>
                 </section>            
             </Link>

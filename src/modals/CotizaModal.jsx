@@ -117,7 +117,7 @@ const CartModal = ({isClosed, closeModal, cart, openToast, closeToast}) => {
                                     value={`${qty} ${name} [ id:${id} ]`}
                                 /> 
                         )})}                    
-                        <button type="submit" className="buttonC">Enviar Cotizacion</button>
+                        <button type="submit" className="button-cotizacion-modal">Enviar Cotizacion</button>
                     </form>
                 </div>
             </div>, 
