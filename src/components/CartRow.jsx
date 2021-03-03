@@ -6,14 +6,14 @@ const CartRow = ({producto, removeFromCart, rowId}) => {
     const {name, description, qty, cover} = producto
     return (
         <tr>
-            <td className="cart-table-product-quantity">
+            <td className="cart-table-product-quantity" >
                 <span>{qty}</span>
                 <span>X</span>
                 <img src={cover} alt="producto"/>
             </td>
-            <td>{name}</td>
-            <td><p>{description}</p></td>
-            <td>
+            <td style={{width:'20%'}}>{name}</td>
+            <td style={{width:'50%'}}><p>{description}</p></td>
+            <td  style={{width:'10%'}}>
                 <i className="fas fa-trash" onClick={() => removeFromCart(rowId)}></i>
             </td>
         </tr>

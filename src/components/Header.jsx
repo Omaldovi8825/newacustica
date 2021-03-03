@@ -10,10 +10,13 @@ const Header = props => {
 
     return(
         <div className="header">
-            <Link to="/">Home</Link>
+            <Link to="/">
+                <img src="https://i.ibb.co/LCmRnxP/logo-dorado-Mesa-de-trabajo-1.png" alt=""/>
+            </Link>
             <div className="menu">
                 <Link to="/audio">Audio</Link>
                 <Link to="/iluminacion">Iluminacion</Link>
+                <Link to="/streaming">Streaming</Link>
                 <Link to="/dj">Dj</Link>
                 <Link to="/video">Video</Link>
             </div>

@@ -22,28 +22,27 @@ const ProductDetails = props => {
     }
 
     return(
-        <div className="product-container">
-            <div className="product-details">
-                <img src={cover} alt="product"/>
-                <h1 className="product-title">{name}</h1>
-                <div className="sliding-card">
-                    <p>{description}</p>
-                    <div className="adding-section">
-                        <input 
-                            type="number"
-                            onChange={handleChange}
-                            value={quantity}
-                        />
-                        <button 
-                            type="button" 
-                            onClick={() => props.addToCart(newProduct)}>
-                                +
-                        </button>
-                    </div>
+        <div className="product-details">
+            <img src={cover} alt="product"/>
+            <h1 className="product-title">{name}</h1>
+            <div className="sliding-card">
+                <p>{description}</p>
+                <div className="adding-section">
+                    <input 
+                        type="number"
+                        onChange={handleChange}
+                        value={quantity}
+                     />
+                 <button 
+                    type="button" 
+                    onClick={() => props.addToCart(newProduct)}>
+                        +
+                </button>
                 </div>
             </div>
-            <Slider slides={slider}/>
         </div>
+        
+
     )
 }
 

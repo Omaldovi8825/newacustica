@@ -1,25 +1,53 @@
 .header {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     justify-content: space-around;
     padding: 20px;
+    background-image: url("https://i.ibb.co/rF6V8Ws/image.jpg");
 }
 
-.menu {
-    border: 1px solid black;
+.header img {
+  width: 200px;
+}
+
+.menu {  
+    transform: perspective(450px) rotateX(40deg);
+    transition: 2s;
+}
+
+.menu:hover {
+    /* border: 1px solid #0d8df5; */
+    transform: rotateX(0deg);
 }
 
 .menu a {
     text-decoration: none;
     margin: 0 20px;
+    font-family: "Shree Devanagari 714", "helvetica";
+    color: #ffffff;
+    font-size: 3vw;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.menu a:hover{
+    box-shadow: 0px 0px 30px #B48E53;
+    /* background-color: #0dedf552; */
+    color: rgb(253, 253, 253);
+    text-shadow: 0 0 10px #B48E53;
+    border-radius: 20px;
+    /* padding: 10px; */
+   
 }
 
 .cart {
     /* border: 1px solid black; */
     font-size: 20px;
+    color: white;
 }
 
 .fa-shopping-basket {
     font-size: 30px;
     margin-right: 10px;
+    color: white;
 }
