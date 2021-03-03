@@ -5,7 +5,7 @@ const productos = {
             name: 'Poste',
             description: 'poste montaje LTSA',
             price: 100,
-            cover: 'https://i.ibb.co/SwzxWvx/s3.jpg',
+            cover: 'src/assets/images/s4.jpg',
             slider: [
                 'https://i.ibb.co/SwzxWvx/s3.jpg',
                 'https://i.ibb.co/JHJgSXt/audio1.png',

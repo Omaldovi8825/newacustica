@@ -1,13 +1,18 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CompressionWebpackPlugin = require('compression-webpack-plugin')
+
 require('dotenv').config()
+
+const isProduction = process.env.ENV === 'production'
+console.log(`is production: ${isProduction}`)
 
 module.exports = {
     entry: './src/index.js',
     output:{
         path: path.resolve(__dirname, 'build'),
-        filename: '[fullhash].js'
+        filename: 'app.js'
     },
     mode: process.env.ENV,
     resolve: {
@@ -22,13 +27,20 @@ module.exports = {
             },
             {
                 test: /\.css/,
-                use: [
+                use: isProduction ? [
+                    {
+                        loader: MiniCssExtractPlugin.loader
+                    }, 
+                    'css-loader'
+                ] :
+                [
                     'style-loader',
-                    // {
-                    //     loader: MiniCssExtractPlugin.loader
-                    // },
                     'css-loader'
                 ]
+            },
+            {
+                test: /\.jpg/,
+                use: 'file-loader'
             }
         ]
     },
@@ -42,8 +54,12 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './public/index.html'
         }),
-        new MiniCssExtractPlugin({
-            filename: '[fullhash].css'
-        })
+        isProduction ? new MiniCssExtractPlugin({
+            filename: 'app.css'
+        }) : () => {},
+        // new CompressionWebpackPlugin({
+        //     test: /\.js$|.css$/,
+        //     filename: '[path][base].gz'
+        // })
     ]
 }

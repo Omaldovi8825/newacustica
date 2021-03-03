@@ -33,10 +33,26 @@ const CartModal = ({isClosed, closeModal, cart, openToast, closeToast}) => {
 
     const handleSubmit = e => {
         e.preventDefault()
-        emailjs.sendForm('service_6gospjv', 'template_qudchnn', e.target, 'user_vtTQxlKUrU0SjMRoW0gzv')
-            .then((result) => showToast())
-            .catch(error => console.log(error.text))
-        
+        // emailjs.sendForm('service_6gospjv', 'template_qudchnn', e.target, 'user_vtTQxlKUrU0SjMRoW0gzv')
+        //     .then((result) => showToast())
+        //     .catch(error => console.log(error.text))
+
+        fetch('/api', {
+            method: 'POST',
+            body: JSON.stringify({
+                name: form.nombre,
+                email: form.email,
+                phone: form.telefono
+            }),
+            headers: {
+                'Accept': 'application/json',
+                'Content-type': 'application/json'
+            }
+        })
+        .then(res => res.json())
+        .then(res => console.log(res))
+        .catch(err => console.log(err.message))
+
         setForm(initialFormState)
         closeModal()
     }
