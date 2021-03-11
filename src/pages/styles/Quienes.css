@@ -1,0 +1,10 @@
+.quienes-title {
+    color: white;
+    background-color: #000000d6;
+    text-align: center;
+    width: 100%;
+    transform: translateY(-50%);
+    margin: 0;
+    transition: 1s;
+    font-family: Bodoni;
+}

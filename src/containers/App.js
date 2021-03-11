@@ -9,6 +9,7 @@ import Dj from '../pages/Dj'
 import Audio from '../pages/Audio'
 import Streaming from '../pages/Streaming'
 import Cotizacion from '../pages/Cotizacion'
+import Quienes from '../pages/Quienes'
 
 const App = () => (
     <HashRouter>
@@ -21,6 +22,7 @@ const App = () => (
                 <Route exact path="/audio" component={Audio} />
                 <Route exact path="/streaming" component={Streaming} />
                 <Route exact path="/cotizacion" component={Cotizacion} />
+                <Route exact path="/quienes" component={Quienes} />
             </Layout>
         </Switch>
     </HashRouter>
