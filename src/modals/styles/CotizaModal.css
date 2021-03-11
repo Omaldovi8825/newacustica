@@ -41,3 +41,7 @@
     flex-direction: column;
     justify-content: space-around;
 }
+
+.cotiza-area form input {
+    font-size: 18px;
+}

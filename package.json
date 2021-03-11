@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve",
+    "start": "webpack serve --config webpack.config.dev.js",
     "build": "webpack"
   },
   "keywords": [],
@@ -17,22 +17,21 @@
     "@babel/preset-env": "^7.12.13",
     "@babel/preset-react": "^7.12.13",
     "babel-loader": "^8.2.2",
-    "compression-webpack-plugin": "^7.1.2",
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.0.2",
-<<<<<<< HEAD
+    "css-minimizer-webpack-plugin": "^1.2.0",
+    "dotenv-webpack": "^6.0.2",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.2.0",
     "mini-css-extract-plugin": "^1.3.6",
-=======
-    "html-webpack-plugin": "^5.0.0",
-    "mini-css-extract-plugin": "^1.3.8",
->>>>>>> 7de67827be1c19a06d2fbd293aba32ebc8d7da35
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
     "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^5.1.1",
+    "url-loader": "^4.1.1",
     "webpack": "^5.21.2",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2"
@@ -40,7 +39,6 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "emailjs-com": "^2.6.4",
-    "file-loader": "^6.2.0",
     "mysql": "^2.18.1"
   }
 }

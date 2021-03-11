@@ -32,6 +32,7 @@ const Cotizacion = ({cart}) => {
                         ))}
                     </tbody>
                 </table>
+                {cart.length > 0 && 
                 <button 
                     type="button"
                     className="cotizacion-button"
@@ -39,6 +40,7 @@ const Cotizacion = ({cart}) => {
                 >
                     Cotizar
                 </button>
+                }   
             </div>
             <CotizaModal 
                 isClosed={isClosed} 

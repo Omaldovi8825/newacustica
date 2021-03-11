@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'Shree';
+    src: url('./assets/fonts/Shree\ Devanagari\ 714.woff');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bodoni';
+    src: url('./assets/fonts/Bodoni.woff');
+    /* font-style: normal;
+    font-weight: 400; */
+}
+
 * {
     box-sizing: border-box;
 }
@@ -7,7 +20,7 @@ body {
     background-color: #BBA689;
     /* background-image: radial-gradient(circle at top right, rgb(52,51,51) 0%, rgb(52,51,51) 1%,rgb(50,48,48) 1%, rgb(50,48,48) 10%,rgb(52,51,51) 10%, rgb(52,51,51) 22%,rgb(52,51,51) 22%, rgb(52,51,51) 23%,rgb(35,35,35) 23%, rgb(35,35,35) 28%,rgb(19,18,18) 28%, rgb(19,18,18) 37%,rgb(0,0,0) 37%, rgb(0,0,0) 100%);  */
     background-attachment:fixed;
-    font-family: 'Bodoni Berthold BQ';
+    font-family: 'Shree';
 }
 
 input {

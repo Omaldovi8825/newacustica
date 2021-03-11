@@ -13,16 +13,16 @@ const Header = props => {
             <Link to="/">
                 <img src="https://i.ibb.co/LCmRnxP/logo-dorado-Mesa-de-trabajo-1.png" alt=""/>
             </Link>
-            <div className="menu">
+            <nav className="menu">
                 <Link to="/audio">Audio</Link>
                 <Link to="/iluminacion">Iluminacion</Link>
-                <Link to="/streaming">Streaming</Link>
+                <Link to="/streaming">Streaming y video</Link>
                 <Link to="/dj">Dj</Link>
-                <Link to="/video">Video</Link>
-            </div>
+                <Link to="/paquetes">Paquetes</Link>
+            </nav>
             <div className="cart">
                 <Link to="/cotizacion">
-                    <i className="fas fa-shopping-basket"></i>
+                    <img src="https://i.ibb.co/k9KHx3Z/cotizadorado.png" alt="cotizacion"/>
                 </Link>
                 <span>{total}</span>
             </div>

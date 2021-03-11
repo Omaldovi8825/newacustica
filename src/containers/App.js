@@ -10,19 +10,20 @@ import Audio from '../pages/Audio'
 import Streaming from '../pages/Streaming'
 import Cotizacion from '../pages/Cotizacion'
 import Clientes from '../pages/Clientes'
+import Paquetes from '../pages/Paquetes'
 
 const App = () => (
     <HashRouter>
         <Switch>
-            <Route exact path="/" component={Home} />
             <Layout>
+                <Route exact path="/" component={Home} />
                 <Route exact path="/iluminacion" component={Iluminacion} />
-                <Route exact path="/video" component={Video} />
                 <Route exact path="/dj" component={Dj} />
                 <Route exact path="/audio" component={Audio} />
                 <Route exact path="/streaming" component={Streaming} />
                 <Route exact path="/cotizacion" component={Cotizacion} />
                 <Route exact path="/clientes" component={Clientes} />
+                <Route exact path="/paquetes" component={Paquetes} />
             </Layout>
         </Switch>
     </HashRouter>

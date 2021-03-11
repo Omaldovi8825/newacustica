@@ -1,5 +1,5 @@
 .parallax {
-    font-family: 'Bodoni Berthold BQ' !important;
+    font-family: 'Bodoni';
     color: #fff;
     text-shadow: 0PX 0PX 30PX black;
     height: 60vh;
@@ -11,7 +11,7 @@
 }
 
 .parallax h1 {
-    font-size: 10vh ;
+    font-size: 6vw;
     padding: 10px;
 }
 

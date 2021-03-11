@@ -1,0 +1,47 @@
+.paquete-container {
+    border: 1px solid black;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.banner-container {
+    width: 40%;
+    border: 1px solid black;
+}
+
+.banner-container h1 {
+    text-align: center;
+    margin: 0;
+}
+
+.paquete-info {
+    width: 55%;
+    border: 1px solid black;
+    position: relative;
+    padding: 0 20px;
+}
+
+.paquete-info button {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-image: url("https://i.ibb.co/Z6PRyJB/dorado.png");
+    border: none;
+    outline: none;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.paquetes-list {
+    border: 1px solid black;
+    height: 57%;
+    overflow: auto;
+    width: 87%;
+}

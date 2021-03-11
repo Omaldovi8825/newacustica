@@ -1,0 +1,30 @@
+.redes {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    /* border: 1px solid white; */
+}
+
+.redes button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.redes button img {
+    box-shadow: 0 0 10px black;
+    border-radius: 50%;
+    transition: 2s;
+}
+
+.sm-button {
+    width: 60px;
+    position: absolute;
+    bottom: 10%;
+    transition: 1.5s;
+    box-shadow: 0 0 10px black;
+    border-radius: 50%;
+    z-index: -1;
+}
+

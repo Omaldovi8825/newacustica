@@ -3,12 +3,10 @@ import {connect} from 'react-redux'
 import {addToCart} from '../actions'
 import './styles/ProductDetails.css'
 
-import Slider from '../components/Slider'
-
 import {useHandleCounter} from '../hooks'
 
 const ProductDetails = props => {
-    const {id, name, description, cover, slider} = props.producto
+    const {id, name, description, cover} = props.producto
     
     const [quantity, setQuantity] = useHandleCounter()
     
@@ -23,7 +21,7 @@ const ProductDetails = props => {
 
     return(
         <div className="product-details">
-            <img src={cover} alt="product"/>
+            <img src={require(`../assets/images/${cover}`)} alt="product"/>
             <h1 className="product-title">{name}</h1>
             <div className="sliding-card">
                 <p>{description}</p>
@@ -41,8 +39,6 @@ const ProductDetails = props => {
                 </div>
             </div>
         </div>
-        
-
     )
 }
 
