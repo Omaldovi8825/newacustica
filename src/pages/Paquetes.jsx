@@ -29,8 +29,8 @@ const Paqutes = ({paquetes, addToCart}) => {
                             <h1>{name}</h1>
                         </div>
                         <div className="paquete-info">
-                            <p>{description}</p>
-                            <p>Productos:</p>
+                            <p className="description-product">{description}</p>
+                            <p className="producto-titulo">Productos:</p>
                             <div className="paquetes-list">
                                 <ul>
                                     {products.map((product, index) => (
